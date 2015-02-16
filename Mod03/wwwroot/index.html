@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>03 - Services & Factories</title>
+
+    <link rel="stylesheet" href="/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+
+    <!--<style>-->
+        <!--.ng-scope{-->
+            <!--border-style: solid;-->
+            <!--border-width: 2px;-->
+            <!--border-color: red;-->
+        <!--}-->
+
+    <!--</style>-->
+</head>
+
+<body data-ng-app="demoApp">
+<h1>03 - Services & Factories</h1>
+
+<div class="container">
+    <div data-ng-controller="DemoCtrl">
+        Firstname: <input type="text" ng-model="person.firstName"></input>
+        <br/>
+        Lastname: <input type="text" ng-model="person.lastName"></input>
+        <br/>
+        <button ng-click="save()">Save</button>
+
+        <hr/>
+
+        <input type="text" ng-model="filterExpn"/>
+        <ul>
+            <li ng-repeat="p in people  | filter:filterExpn">
+                {{p.firstName}} {{p.lastName}}
+            </li>
+        </ul>
+
+    </div>
+    <hr/>
+    <div data-ng-controller="OtherCtrl">
+        Message: {{message}}
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
+<script src="demo.js"></script>
+
+</body>
+</html>

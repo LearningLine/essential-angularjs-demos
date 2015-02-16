@@ -3,6 +3,8 @@
 Essential AngularJS Demos
 ===========
 
+[Links](Links.md) from the various modules.
+
 Welcome to our demos repository for 
 [Essential Angularjs](https://www.develop.com/training-course/essential-angularjs-client-side-programming-with-javascript) 
 from [DevelopMentor](https://develop.com). 
