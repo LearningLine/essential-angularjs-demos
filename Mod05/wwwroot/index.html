@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>05 - Data entry using AngularJS</title>
+
+    <link rel="stylesheet" href="/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+
+    <style>
+        form.ng-invalid button {
+            background-color: red;
+        }
+
+        input.ng-invalid {
+            border-color: lightcoral;
+        }
+
+    </style>
+</head>
+
+<body data-ng-app="demoApp">
+<h1>05 - Data entry using AngularJS</h1>
+
+<div class="container">
+    <div data-ng-controller="DemoCtrl">
+        <form novalidate name="form" >
+            <div>
+                First name: <input type="text"
+                                   name="firstName"
+                                   ng-model="person.firstName"
+                                   ng-required="true"
+                    />
+            </div>
+            <div ng-show="form.firstName.$invalid">
+                The first name is invalid
+            </div>
+            <div>
+                Last name: <input type="text"
+                                  name="lastName"
+                                  ng-model="person.lastName"
+                    ng-required="true"
+                    ng-minlength="2"/>
+            </div>
+            <div ng-show="form.lastName.$invalid">
+                The last name is invalid
+            </div>
+            <div>
+                Email: <input type="email"
+                                  name="email"
+                                  ng-model="person.email"
+                                  ng-required="true"
+                                  />
+            </div>
+
+            <button ng-click="save()"
+                    ng-disabled="form.$invalid">Save</button>
+            {{form.$invalid}}
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
+    <script src="demo.js"></script>
+
+</body>
+</html>
