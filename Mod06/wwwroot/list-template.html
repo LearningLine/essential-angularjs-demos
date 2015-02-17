@@ -1,0 +1,18 @@
+<h2>Movies</h2>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th style="width: 1px;"></th>
+    </tr>
+    <tr ng-repeat="movie in movies">
+        <td>{{movie.title}}</td>
+        <td>{{movie.year}}</td>
+        <td>{{movie.mpaaRating}}</td>
+        <td>
+            <button class="btn btn-default glyphicon glyphicon-pencil"
+                    ng-click="details(movie.id)"></button>
+        </td>
+    </tr>
+</table>
