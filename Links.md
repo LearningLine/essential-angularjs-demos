@@ -21,3 +21,7 @@
 
 - [Exception Handling in an AngularJS Application](http://blogs.msmvps.com/deborahk/exception-handling-in-an-angularjs-application/)
 
+## 04 - AngularJS and AJAX ##
+
+- [Fiddler](http://www.telerik.com/fiddler)
+- [RAW Stack movies](http://rawstack.azurewebsites.net/Movies#/movies)
