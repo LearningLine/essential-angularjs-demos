@@ -36,3 +36,6 @@
 - [Concatenates and registers AngularJS templates in the $templateCache.](https://www.npmjs.com/package/gulp-angular-templatecache)
 - [AngularUI](https://angular-ui.github.io/)
 
+## 09 - AngularJS Patterns ##
+- http://browserify.org/
+- http://jshint.com/
