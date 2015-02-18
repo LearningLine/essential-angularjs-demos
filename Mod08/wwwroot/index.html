@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>07 - AngularJS Directives</title>
+
+    <link rel="stylesheet" href="/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+
+</head>
+
+<body data-ng-app="demoApp">
+<h1>07 - AngularJS Directives</h1>
+
+<div class="container">
+    <div data-ng-controller="DemoCtrl">
+
+        First name: <input type="text" data-ng-model="person.firstName"/>
+        <br/>
+        Last name: <input type="text" data-ng-model="person.lastName"/>
+        <br/>
+        <button ng-click="save()">Save</button>
+
+    </div>
+
+
+    <script src="angularjs-1.3.13/angular.js"></script>
+    <script src="demo.js"></script>
+
+</body>
+</html>
