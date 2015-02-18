@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>09 - AngularJS Patterns</title>
+
+    <link rel="stylesheet" href="/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+
+    </style>
+</head>
+
+<body data-ng-app="demoApp">
+<h1>09 - AngularJS Patterns</h1>
+
+<div class="container ng-cloak">
+    <div data-ng-controller="DemoCtrl">
+
+        First name: <input type="text" data-ng-model="person.firstName"/>
+        <br/>
+        Last name: <input type="text" data-ng-model="person.lastName"/>
+        <br/>
+        <button ng-click="save()">Save</button>
+
+        <br/>
+        {{person.firstName}}
+        <br/>
+        {{person.lastName}}
+        <br/>
+
+        <ul>
+            <li ng-repeat="n in []">
+                {{n}}
+            </li>
+        </ul>
+
+        <div>
+            <input type="text" ng-model="obj.text"/>
+            {{$id}}
+        </div>
+
+        <div ng-if="true">
+            <input type="text" ng-model="obj.text"/>
+            {{$id}}
+        </div>
+    </div>
+
+    <script src="angularjs-1.3.13/angular.js"></script>
+    <script src="demo.js"></script>
+    <script src="calculator1.js"></script>
+    <script src="calculator2.js"></script>
+
+</body>
+</html>
