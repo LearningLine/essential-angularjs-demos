@@ -30,3 +30,9 @@
 
 - [UI Router](http://angular-ui.github.io/ui-router/)
 
+## 07 - AngularJS Directives ##
+
+- [JavaScript JSON Date Parsing and real Dates](http://weblog.west-wind.com/posts/2014/Jan/06/JavaScript-JSON-Date-Parsing-and-real-Dates)
+- [Concatenates and registers AngularJS templates in the $templateCache.](https://www.npmjs.com/package/gulp-angular-templatecache)
+- [AngularUI](https://angular-ui.github.io/)
+
