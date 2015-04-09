@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="RPGAdmin" ng-controller="MonsterCtrl">
+
+    <div ng-repeat="monster in monsters">
+        <input type="text" ng-model="monster.name">
+        <input type="text" ng-model="monster.stats.hitPoints">
+        <input type="text" ng-model="monster.id">
+        <button ng-click="monster.$save()">Save</button>
+        <button ng-click="kill(monster)">Kill</button>
+    </div>
+    <div>
+        <input type="text" ng-model="newMonster.name">
+        <input type="text" ng-model="newMonster.stats.hitPoints">
+        <input type="text" ng-model="newMonster.id">
+        <button ng-click="create(newMonster)">Save</button>
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-resource.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

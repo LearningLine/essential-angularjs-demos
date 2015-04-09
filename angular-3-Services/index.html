@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body ng-app="CoolGame">
+<h1>SuperGame</h1>
+<div ng-controller="CreateCtrl">
+    <h2>Step {{step}} of 3</h2>
+<label>Name:</label>
+<input type="text" ng-model="character.name"/>
+    <div>
+        Select Class:
+        <select ng-model="character.class" ng-options="class.name for class in classes track by class.id"></select>
+    </div>
+    <div>
+        Your character has {{character.gold | currency}} gold!
+    </div>
+    <div>
+        <button ng-disabled="!character.name" ng-click="create()">Create</button>
+    </div>
+
+
+    <div ng-controller="StatCtrl" ng-show="character.created">
+        <hr>
+        Your characters name is: {{character.name | uppercaseFirst}}
+        <div><button ng-click="rollStats()">Roll Stats</button></div>
+        <div>
+            <ul>
+                <li ng-repeat="(key, value) in character.stats">{{key}}: {{value}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
