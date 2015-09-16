@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <link href="/Libs/Bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body data-ng-app="theApp">
+
+<div class="container" >
+    <h1>Angular JS</h1>
+
+    {{1 + 1}}
+
+    <div data-ng-controller="FirstController">
+
+        {{person.name}}
+        <br/>
+        <span ng-bind="person.name"></span>
+        <br/>
+        <input type="text" ng-model="person.name"/>
+        <br/>
+        <input type="text" ng-model="person.name"/>
+        <br/>
+        {{now}}
+
+        <button ng-click="addPet()">Add  pet</button>
+        <ul>
+            <li ng-repeat="pet in pets">
+                <input type="text" ng-model="pet.name"/>
+                {{pet.name}}
+            </li>
+        </ul>
+
+
+        <ul>
+            <li ng-repeat="pet in pets">
+                <input type="text" ng-model="pet.name"/>
+                {{pet.name}}
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="Libs/angular/angular.js"></script>
+<script src="App/App.js"></script>
+
+</body>
+</html>
