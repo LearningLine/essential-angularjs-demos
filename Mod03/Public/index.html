@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <link href="/Libs/Bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body data-ng-app="theApp">
+
+<div class="container" >
+    <h1>AngularJS Services & Factories</h1>
+
+    <div data-ng-controller="DemoController">
+
+        <input type="text" ng-model="pets[0].name"/>
+
+
+        <button ng-click="doAsync()">DO async</button>
+        {{message}}
+
+        <hr/>
+        <input type="text" ng-model="filterText"/>
+        <ul>
+            <li ng-repeat="cat in pets | filter:{name:filterText}">
+                {{cat.name}}
+            </li>
+        </ul>
+
+    </div>
+
+
+</div>
+
+<script src="Libs/angular/angular.js"></script>
+<script src="App/App.js"></script>
+<script src="App/dataService.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "AngularJS",
+  "version": "1.0.0",
+  "description": "Essential AngularJS Services & Factories",
+  "main": "./server/server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "open": "^0.0.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-main-bower-files": "^1.2.1"
+  },
+  "scripts": {
+    "start": "node ./server/server.js",
+    "gulp": "node ./node_modules/gulp/bin/gulp.js"
+  },
+  "author": "Maurice de Beijer",
+  "license": "ISC"
+}
