@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <link href="/Libs/Bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <style>
+        input.ng-invalid {
+            background-color: red;
+        }
+
+        .ng-dirty{
+            border-color: green;
+        }
+    </style>
+</head>
+<body data-ng-app="theApp">
+
+<div class="container">
+    <h1>Data entry using AngularJS</h1>
+
+    <div data-ng-controller="BookController as ctrl">
+
+        <form name="inputForm">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text"
+                   name="title"
+                   class="form-control"
+                   ng-model="ctrl.book.title"
+                    xxxng-model-options="{debounce:2500}"
+                    ng-required="true"
+                    ng-minlength="5">
+            <div ng-show="inputForm.title.$error.required">
+                The field required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Author</label>
+            <input type="text"
+                   class="form-control"
+                   ng-model="ctrl.book.author"
+                    ng-model-options="{updateOn:'blur'}">
+        </div>
+
+            <input type="email" onChange="emailChanged(inputForm)"/>
+        <pre>
+            {{ctrl.book.title}} by {{ctrl.book.author}}
+        </pre>
+        <button class="btn btn-default"
+                ng-click="ctrl.save()"
+                ng-disabled="inputForm.$pristine || inputForm.$invalid">
+            Save
+        </button>
+        </form>
+    </div>
+</div>
+
+<script src="Libs/angular/angular.js"></script>
+<script src="libs/angular-resource/angular-resource.js"></script>
+<script src="App/app.js"></script>
+
+</body>
+</html>
