@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <link href="/Libs/Bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body data-ng-app="theApp">
+
+<div class="container" >
+    <h1>AngularJS and AJAX</h1>
+
+    <div data-ng-controller="DemoController as ctrl">
+
+
+        <ul>
+            <li ng-repeat="book in ctrl.books">
+                {{book.title}}
+            </li>
+        </ul>
+
+        <button ng-click="ctrl.addBook()">Add book</button>
+    </div>
+
+    <div data-ng-controller="ResourceController as ctrl">
+
+
+        <ul>
+            <li ng-repeat="book in ctrl.books">
+                {{book.title}}
+            </li>
+        </ul>
+
+        <button ng-click="ctrl.addBook()">Add book</button>
+    </div>
+
+</div>
+
+<script src="Libs/angular/angular.js"></script>
+<script src="libs/angular-resource/angular-resource.js"></script>
+<script src="App/app.js"></script>
+
+</body>
+</html>
