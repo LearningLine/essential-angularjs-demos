@@ -1,0 +1,13 @@
+<ul>
+    <li ng-repeat="book in ctrl.books">
+        <button class="btn-link" ng-click="ctrl.edit(book)">
+        {{book.title}}
+    </button>
+    </li>
+</ul>
+
+<ul>
+    <li ng-repeat="book in ctrl.books">
+        <a href="#/books/{{book.id}}" >{{book.title}}</a>
+    </li>
+</ul>
