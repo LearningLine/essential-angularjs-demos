@@ -43,7 +43,7 @@
                     ng-model-options="{updateOn:'blur'}">
         </div>
 
-            <input type="email" onChange="emailChanged(inputForm)"/>
+            <input type="email" ng-model="ctrl.book.email" ng-change="ctrl.emailChanged(inputForm)"/>
         <pre>
             {{ctrl.book.title}} by {{ctrl.book.author}}
         </pre>

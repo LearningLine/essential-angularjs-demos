@@ -10,7 +10,7 @@
         return $resource('/api/books/:id');
     });
 
-    theApp.controller('BookController', function (Book) {
+    theApp.controller('BookController', function (Book, $scope) {
         this.book = Book.get({id: 1});
 
         this.save = function () {
@@ -19,7 +19,7 @@
 
         this.emailChanged = function(inputForm){
 
-            inputForm.$invalid = true;
+            inputForm.$setValidity("customError",false);
         }
     });
 
