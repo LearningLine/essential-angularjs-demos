@@ -36,7 +36,8 @@ describe('The BookEditController', function () {
         beforeEach(inject(function ($controller, $httpBackend) {
             httpBackend = $httpBackend;
 
-            httpBackend.when('GET','/api/books/42').respond({title: 'Cool'});
+            httpBackend.when('GET','/api/books/42')
+            		   .respond({title: 'Cool'});
 
             ctrl = $controller('BookEditController', {
                 $scope: {},
