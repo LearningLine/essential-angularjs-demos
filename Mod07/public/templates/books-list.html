@@ -1,0 +1,16 @@
+<ul>
+    <li ng-repeat="book in ctrl.books">
+        <a href="#/books/{{book.id}}" >{{book.title}}</a>
+    </li>
+</ul>
+
+
+<ul>
+    <li ng-repeat="book in ctrl.books">
+        <a href="#/books/{{book.id}}" >
+
+            <div books-template=""></div>
+
+        </a>
+    </li>
+</ul>

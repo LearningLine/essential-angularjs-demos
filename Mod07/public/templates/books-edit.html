@@ -1,0 +1,39 @@
+<form name="inputForm">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text"
+               name="title"
+               class="form-control"
+               ng-model="ctrl.book.title"
+               axa-set-focus="true"
+               ng-required="true"
+               ng-minlength="5">
+        <div ng-show="inputForm.title.$error.required">
+            The field required
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Author</label>
+        <input type="text"
+               class="form-control"
+               ng-model="ctrl.book.author"
+               ng-model-options="{updateOn:'blur'}">
+    </div>
+
+    <button class="btn btn-default"
+            ng-click="ctrl.save()"
+            ng-disabled="inputForm.$pristine || inputForm.$invalid">
+        Save
+    </button>
+
+    <div axa-add-text=""></div>
+
+
+    <div my-transclude="">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, tempora, temporibus? Asperiores deserunt dolorum eius enim eum, fugiat ipsa ipsam libero minima mollitia natus nisi rem sapiente veniam voluptatum. Ea.
+    </div>
+
+    <div scoped-thing=""></div>
+    <div isolated-thing="" msg="message"></div>
+</form>

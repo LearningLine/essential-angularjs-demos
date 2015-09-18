@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <link href="/Libs/Bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <base href="/"/>
+
+    <style>
+        .ng-scope {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body data-ng-app="theApp">
+
+<div class="container">
+    <h1>AngularJS Directives</h1>
+
+    <div ng-view=""></div>
+
+</div>
+
+<script src="Libs/angular/angular.js"></script>
+<script src="libs/angular-resource/angular-resource.js"></script>
+<script src="libs/angular-route/angular-route.js"></script>
+<script src="App/app.js"></script>
+
+
+<!--<script type="text/ng-template" id="/templates/book-template.html">-->
+    <!--<div>Some markup</div>-->
+
+<!--</script>-->
+</body>
+</html>
